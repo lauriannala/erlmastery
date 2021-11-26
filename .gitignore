@@ -32,6 +32,6 @@ erlmastery-*.tar
 npm-debug.log
 /assets/node_modules/
 
-dev.exs.example
+dev.exs
 
 *.swp

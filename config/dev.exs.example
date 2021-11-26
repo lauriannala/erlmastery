@@ -74,5 +74,8 @@ config :phoenix, :stacktrace_depth, 20
 config :phoenix, :plug_init_mode, :runtime
 
 config :ueberauth, Ueberauth.Strategy.Discord.OAuth,
-  client_id: "913837780944187474",
-  client_secret: "UTPxh2Eeb3O4ry_VA13dDrRCiHUGQ1k-"
+  client_id: "discord_client_id",
+  client_secret: "discord_client_secret"
+
+config :erlmastery, ErlmasteryWeb.Authentication,
+  secret_key: "qK6YAmhNOD2iCKLob8A46RzjzsA1DrEXM1mI16JepPBMNRoElpoNFWop807IJlFA"
