@@ -20,6 +20,13 @@ defmodule ErlmasteryWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/auth", ErlmasteryWeb do
+    pipe_through :browser
+
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", ErlmasteryWeb do
   #   pipe_through :api
