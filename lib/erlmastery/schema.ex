@@ -3,8 +3,7 @@ defmodule Erlmastery.Schema do
     quote do
       use Ecto.Schema
 
-      @primary_key {:id, :binary_id, read_after_writes: true}
-      @foreign_key_type :binary_id
+      @primary_key {:id, :id, read_after_writes: true}
     end
   end
 end
