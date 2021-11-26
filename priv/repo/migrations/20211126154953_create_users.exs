@@ -2,6 +2,8 @@ defmodule Erlmastery.Repo.Migrations.CreateUsers do
   use Ecto.Migration
 
   def change do
+    execute "CREATE EXTENSION pgcrypto"
+
     create table(:users, primary_key: false) do
       add :id, :binary_id, primary_key: true, default: fragment("gen_random_uuid()")
       add :email, :string
