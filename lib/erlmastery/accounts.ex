@@ -20,4 +20,8 @@ defmodule Erlmastery.Accounts do
         {:ok, user}
     end
   end
+
+  def get_user!(id) do
+    Repo.get_by!(User, id: id)
+  end
 end

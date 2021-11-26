@@ -50,7 +50,8 @@ defmodule Erlmastery.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:ueberauth, "~> 0.6"},
-      {:ueberauth_discord, "~> 0.6"}
+      {:ueberauth_discord, "~> 0.6"},
+      {:guardian, "~> 2.0"}
     ]
   end
 

@@ -73,4 +73,7 @@ if config_env() == :prod do
   config :ueberauth, Ueberauth.Strategy.Discord.OAuth,
     client_id: System.get_env("DISCORD_CLIENT_ID"),
     client_secret: System.get_env("DISCORD_CLIENT_SECRET")
+
+  config :erlmastery, ErlmasteryWeb.Authentication,
+    secret_key: System.get_env("GUARDIAN_SECRET_KEY")
 end

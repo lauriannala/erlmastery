@@ -4,6 +4,7 @@ defmodule ErlmasteryWeb.AuthController do
 
   alias Ueberauth.Strategy.Helpers
   alias Erlmastery.Accounts
+  alias ErlmasteryWeb.Authentication
 
   def request(conn, _params) do
     render(conn, "request.html", callback_url: Helpers.callback_url(conn))
@@ -11,6 +12,7 @@ defmodule ErlmasteryWeb.AuthController do
 
   def delete(conn, _params) do
     conn
+    |> Authentication.Plug.sign_out()
     |> put_flash(:info, "You have been logged out!")
     |> clear_session()
     |> redirect(to: "/")
@@ -26,6 +28,7 @@ defmodule ErlmasteryWeb.AuthController do
     case Accounts.find(auth) do
       {:ok, user} ->
         conn
+        |> Authentication.Plug.sign_in(user)
         |> put_flash(:info, "Successfully authenticated.")
         |> put_session(:current_user, user)
         |> configure_session(renew: true)

@@ -52,6 +52,8 @@ config :ueberauth, Ueberauth,
     discord: {Ueberauth.Strategy.Discord, [default_scope: "identify email"]}
   ]
 
+config :erlmastery, ErlmasteryWeb.Authentication, issuer: "erlmastery"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
