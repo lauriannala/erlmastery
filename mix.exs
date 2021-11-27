@@ -51,7 +51,8 @@ defmodule Erlmastery.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:ueberauth, "~> 0.6"},
       {:ueberauth_discord, "~> 0.6"},
-      {:guardian, "~> 2.0"}
+      {:guardian, "~> 2.0"},
+      {:ecto_psql_extras, "~> 0.6"},
     ]
   end
 
