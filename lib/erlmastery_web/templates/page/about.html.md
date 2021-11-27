@@ -72,6 +72,7 @@ Sofware Engineer - __Basware__
 
 Tampere University - __Master's degree, Computer Science__
 
+<br/>
 
 `2013-2017`
 
