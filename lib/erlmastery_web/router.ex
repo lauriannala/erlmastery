@@ -33,6 +33,11 @@ defmodule ErlmasteryWeb.Router do
 
     get "/", PageController, :index
     get "/about", PageController, :about
+
+    scope "/chat", as: :chat_room do
+      live "/new", Live.Chat.NewChatRoom, :new
+      live "/:name", Live.Chat.ShowChatRoom, :show
+    end
   end
 
   scope "/auth", ErlmasteryWeb do
