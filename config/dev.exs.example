@@ -59,7 +59,7 @@ config :erlmastery, ErlmasteryWeb.Endpoint,
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/erlmastery_web/(live|views)/.*(ex)$",
-      ~r"lib/erlmastery_web/templates/.*(eex)$"
+      ~r"lib/erlmastery_web/templates/.*(eex|md)$"
     ]
   ]
 
