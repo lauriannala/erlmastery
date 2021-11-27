@@ -33,14 +33,14 @@ Software Designer - __Solita__
 
 * Developing and maintaining fullstack web apps using elixir and phoenix framework
 * Job orchestration using elixir and oban framework
-* Data modellng, and database operations using postgres
+* Data modeling and database operations using postgres
 * Data access using ecto framework
 * Authentication and authorization using ueberauth, guardian and aws cognito (oauth2)
 * Frontend development using vue, vuex and spectrecss
 * Various etl-procedure implementations with elixir/c#
 * System development with rust
 * Http-endpoint implementation using warp library
-* Protobuf datamodeling and (de)compression
+* Protobuf data modeling and (de)compression
 * Developing and maintaining full stack web apps using c# and .net-framework
 * Implementing client software for soap-service
 * Implementing restful apis (client/server)
