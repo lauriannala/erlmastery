@@ -87,3 +87,7 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.nav-title {
+  padding-top: 15px;
+}
