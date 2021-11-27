@@ -15,7 +15,7 @@ config :erlmastery, ErlmasteryWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [view: ErlmasteryWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Erlmastery.PubSub,
-  live_view: [signing_salt: "oEmkwwP/"]
+  live_view: [signing_salt: "gCGgGpDF5ey1N4wpsF0IrgPzLAXCwYRQGRVgLI+VDhQFxZlw5+oQ3R92zewPTIp2"]
 
 # Configures the mailer
 #

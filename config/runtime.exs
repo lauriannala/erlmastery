@@ -42,7 +42,8 @@ if config_env() == :prod do
       port: String.to_integer(System.get_env("PORT") || "4000")
     ],
     secret_key_base: secret_key_base,
-    url: [host: System.get_env("HOST_URL")]
+    url: [host: System.get_env("HOST_URL")],
+    live_view: [signing_salt: System.get_env("LIVE_VIEW_SALT")]
 
   # ## Using releases
   #
