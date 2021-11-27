@@ -1,2 +1,0 @@
-Contact: mailto:lauri.annala@protonmail.com
-Encryption: .well-known/erlmastery_public.pgp

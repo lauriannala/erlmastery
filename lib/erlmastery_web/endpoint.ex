@@ -20,7 +20,7 @@ defmodule ErlmasteryWeb.Endpoint do
     at: "/",
     from: :erlmastery,
     gzip: false,
-    only: ~w(assets fonts images favicon.ico robots.txt)
+    only: ~w(assets fonts images well-known favicon.ico robots.txt)
 
   # security.txt and public key.
   plug Plug.Static,
