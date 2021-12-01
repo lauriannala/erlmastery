@@ -1,7 +1,6 @@
 defmodule ErlmasteryWeb.Live.Chat.NewChatRoom do
   use ErlmasteryWeb, :live_view
 
-  alias Erlmastery.Repo
   alias Erlmastery.Chat.ChatRoom
   import Erlmastery.Chat
 

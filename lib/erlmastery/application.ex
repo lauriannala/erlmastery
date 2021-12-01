@@ -8,20 +8,13 @@ defmodule Erlmastery.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
       Erlmastery.Repo,
-      # Start the Telemetry supervisor
       ErlmasteryWeb.Telemetry,
-      # Start the PubSub system
       {Phoenix.PubSub, name: Erlmastery.PubSub},
-      # Start the Endpoint (http/https)
+      Erlmastery.Chat.Presence,
       ErlmasteryWeb.Endpoint
-      # Start a worker by calling: Erlmastery.Worker.start_link(arg)
-      # {Erlmastery.Worker, arg}
     ]
 
-    # See https://hexdocs.pm/elixir/Supervisor.html
-    # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Erlmastery.Supervisor]
     Supervisor.start_link(children, opts)
   end
