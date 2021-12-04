@@ -100,7 +100,7 @@ main {
 
 body, header {
   background: #282828;
-  color:      #ebdbb2;
+  color: #ebdbb2;
 }
 
 pre {
@@ -116,6 +116,22 @@ a, a:active, a:visited {
 
 code {
   background-color: #1d2021;
+}
+
+button {
+  color: #b16286;
+  background-color: #1d2021;
+  border-color: #ebdbb2;
+}
+
+input[type="text"] {
+  color: #ebdbb2;
+  background-color: #1d2021;
+  border-color: #ebdbb2;
+}
+
+input[type="text"]:focus {
+  border-color: #b16286;
 }
 
 h1, h2, h3, h4, h5 {
