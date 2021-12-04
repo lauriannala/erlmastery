@@ -91,3 +91,33 @@
 .nav-title {
   padding-top: 15px;
 }
+
+/* gruvbox */
+
+main {
+  font-family: monospace, monospace;
+}
+
+body, header {
+  background: #282828;
+  color:      #ebdbb2;
+}
+
+pre {
+  background-color: #3c3836;
+  padding: 1em;
+  border: 0;
+}
+
+a, a:active, a:visited {
+  color: #b16286;
+  background: #282828;
+}
+
+code {
+  background-color: #1d2021;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: .1.5rem;
+}
