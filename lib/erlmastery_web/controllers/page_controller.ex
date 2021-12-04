@@ -8,4 +8,8 @@ defmodule ErlmasteryWeb.PageController do
   def about(conn, _params) do
     render(conn, "about.html")
   end
+
+  def portfolio(conn, _params) do
+    render(conn, "portfolio.html")
+  end
 end

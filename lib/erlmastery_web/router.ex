@@ -33,6 +33,7 @@ defmodule ErlmasteryWeb.Router do
 
     get "/", PageController, :index
     get "/about", PageController, :about
+    get "/portfolio", PageController, :portfolio
 
     scope "/chat", as: :chat_room do
       live "/new", Live.Chat.NewChatRoom, :new
@@ -46,11 +47,6 @@ defmodule ErlmasteryWeb.Router do
     get "/:provider", AuthController, :request
     get "/:provider/callback", AuthController, :callback
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", ErlmasteryWeb do
-  #   pipe_through :api
-  # end
 
   scope "/dashboard" do
     pipe_through [:browser, :guardian, :browser_auth]
