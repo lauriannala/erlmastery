@@ -1,6 +1,6 @@
 # My resume
 
-`Last updated 27.11.2021`
+`Last updated 28.12.2021`
 
 ## Lauri Annala
 Sofware Developer, M.C.S student
@@ -31,6 +31,7 @@ I love:
 
 Software Designer - __Solita__
 
+* Rest api using aws apigateway and aws lambda, persistence with aws s3
 * Developing and maintaining fullstack web apps using elixir and phoenix framework
 * Job orchestration using elixir and oban framework
 * Data modeling and database operations using postgres
