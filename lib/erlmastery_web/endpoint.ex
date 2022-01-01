@@ -44,11 +44,8 @@ defmodule ErlmasteryWeb.Endpoint do
     cookie_key: "request_logger"
 
   if @env == :prod do
-    username = Application.fetch_env!(:erlmastery, :telemetry_poller_username)
-    password = Application.fetch_env!(:erlmastery, :telemetry_poller_password)
-
     plug Unplug,
-      if: {Erlmastery.UnplugPredicates.BasicAuth, username: username, password: password},
+      if: {Erlmastery.UnplugPredicates.BasicAuth},
       do: {PromEx.Plug, prom_ex_module: Erlmastery.PromEx}
   else
     plug PromEx.Plug, prom_ex_module: Erlmastery.PromEx
@@ -73,13 +70,16 @@ defmodule Erlmastery.UnplugPredicates.BasicAuth do
   require Logger
 
   @impl true
-  def call(%Plug.Conn{} = conn, username: expected_username, password: expected_password) do
+  def call(%Plug.Conn{} = conn) do
+    @username Application.fetch_env!(:erlmastery, :telemetry_poller_username)
+    @password Application.fetch_env!(:erlmastery, :telemetry_poller_password)
+
     case Plug.BasicAuth.parse_basic_auth(conn) do
       {actual_username, actual_password} ->
-        success = expected_username == actual_username and expected_password == actual_password
+        success = @username == actual_username and @password == actual_password
 
-        if expected_username != actual_username, do: Logger.info("Username does not match")
-        if expected_password != actual_password, do: Logger.info("Password does not match")
+        if @username != actual_username, do: Logger.info("Username does not match")
+        if @password != actual_password, do: Logger.info("Password does not match")
         if success, do: Logger.info("Succesful metrics poller auth")
 
         success
