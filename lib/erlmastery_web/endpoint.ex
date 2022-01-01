@@ -70,12 +70,19 @@ end
 
 defmodule Erlmastery.UnplugPredicates.BasicAuth do
   @behaviour Unplug.Predicate
+  require Logger
 
   @impl true
   def call(%Plug.Conn{} = conn, username: expected_username, password: expected_password) do
     case Plug.BasicAuth.parse_basic_auth(conn) do
       {actual_username, actual_password} ->
-        expected_username == actual_username and expected_password == actual_password
+        success = expected_username == actual_username and expected_password == actual_password
+
+        if expected_username != actual_username, do: Logger.info("Username does not match")
+        if expected_password != actual_password, do: Logger.info("Password does not match")
+        if success, do: Logger.info("Succesful metrics poller auth")
+
+        success
 
       _ ->
         false
