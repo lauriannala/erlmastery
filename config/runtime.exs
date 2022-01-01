@@ -78,4 +78,7 @@ if config_env() == :prod do
 
   config :erlmastery, ErlmasteryWeb.Authentication,
     secret_key: System.get_env("GUARDIAN_SECRET_KEY")
+
+  config :erlmastery, :telemetry_poller_username, System.get_env("TELEMETRY_POLLER_USERNAME")
+  config :erlmastery, :telemetry_poller_password, System.get_env("TELEMETRY_POLLER_PASSWORD")
 end

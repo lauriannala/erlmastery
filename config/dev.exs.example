@@ -79,3 +79,5 @@ config :ueberauth, Ueberauth.Strategy.Discord.OAuth,
 
 config :erlmastery, ErlmasteryWeb.Authentication,
   secret_key: "qK6YAmhNOD2iCKLob8A46RzjzsA1DrEXM1mI16JepPBMNRoElpoNFWop807IJlFA"
+
+config :unplug, :init_mode, :runtime

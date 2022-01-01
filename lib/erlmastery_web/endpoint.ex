@@ -1,6 +1,8 @@
 defmodule ErlmasteryWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :erlmastery
 
+  @env Application.fetch_env!(:erlmastery, :environment)
+
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
@@ -41,6 +43,17 @@ defmodule ErlmasteryWeb.Endpoint do
     param_key: "request_logger",
     cookie_key: "request_logger"
 
+  if @env == :prod do
+    username = Application.fetch_env!(:erlmastery, :telemetry_poller_username)
+    password = Application.fetch_env!(:erlmastery, :telemetry_poller_password)
+
+    plug Unplug,
+      if: {Erlmastery.UnplugPredicates.BasicAuth, username: username, password: password},
+      do: {PromEx.Plug, prom_ex_module: Erlmastery.PromEx}
+  else
+    plug PromEx.Plug, prom_ex_module: Erlmastery.PromEx
+  end
+
   plug Plug.RequestId
   plug Plug.Telemetry, event_prefix: [:phoenix, :endpoint]
 
@@ -53,4 +66,14 @@ defmodule ErlmasteryWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug ErlmasteryWeb.Router
+end
+
+defmodule Erlmastery.UnplugPredicates.BasicAuth do
+  @behaviour Unplug.Predicate
+
+  @impl true
+  def call(%Plug.Conn{} = conn, username: expected_username, password: expected_password) do
+    {actual_username, actual_password} = Plug.BasicAuth.parse_basic_auth(conn)
+    expected_username == actual_username and expected_password == actual_password
+  end
 end

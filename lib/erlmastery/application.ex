@@ -8,6 +8,7 @@ defmodule Erlmastery.Application do
   @impl true
   def start(_type, _args) do
     children = [
+      Erlmastery.PromEx,
       Erlmastery.Repo,
       ErlmasteryWeb.Telemetry,
       {Phoenix.PubSub, name: Erlmastery.PubSub},
