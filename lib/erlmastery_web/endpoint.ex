@@ -73,7 +73,12 @@ defmodule Erlmastery.UnplugPredicates.BasicAuth do
 
   @impl true
   def call(%Plug.Conn{} = conn, username: expected_username, password: expected_password) do
-    {actual_username, actual_password} = Plug.BasicAuth.parse_basic_auth(conn)
-    expected_username == actual_username and expected_password == actual_password
+    case Plug.BasicAuth.parse_basic_auth(conn) do
+      {actual_username, actual_password} ->
+        expected_username == actual_username and expected_password == actual_password
+
+      _ ->
+        false
+    end
   end
 end
