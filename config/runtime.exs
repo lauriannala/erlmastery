@@ -81,4 +81,12 @@ if config_env() == :prod do
 
   config :erlmastery, :telemetry_poller_username, System.get_env("TELEMETRY_POLLER_USERNAME")
   config :erlmastery, :telemetry_poller_password, System.get_env("TELEMETRY_POLLER_PASSWORD")
+
+  config :erlmastery, Erlmastery.PromEx,
+    grafana: [
+      host: System.get_env("GRAFANA_HOST"),
+      auth_token: System.get_env("GRAFANA_AUTH_TOKEN"),
+      # This is an optional setting and will default to `true`
+      upload_dashboards_on_start: true
+    ]
 end
