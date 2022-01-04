@@ -4,12 +4,35 @@ defmodule ErlmasteryWeb.Router do
   import Phoenix.LiveDashboard.Router
 
   pipeline :browser do
+    content_security_policy = Application.get_env(:erlmastery, :content_security_policy)
+
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
     plug :put_root_layout, {ErlmasteryWeb.LayoutView, :root}
     plug :protect_from_forgery
-    plug :put_secure_browser_headers
+
+    plug :put_secure_browser_headers, %{
+      "content-security-policy" => content_security_policy,
+      "cross-origin-opener-policy" => "same-origin",
+      "cross-origin-resource-policy" => "same-origin"
+    }
+  end
+
+  # Relieved csp settings for dashboard views.
+  pipeline :dashboard_browser do
+    content_security_policy = Application.get_env(:erlmastery, :content_security_policy_dashboard)
+
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug :fetch_live_flash
+    plug :protect_from_forgery
+
+    plug :put_secure_browser_headers, %{
+      "content-security-policy" => content_security_policy,
+      "cross-origin-opener-policy" => "same-origin",
+      "cross-origin-resource-policy" => "same-origin"
+    }
   end
 
   pipeline :api do
@@ -49,7 +72,7 @@ defmodule ErlmasteryWeb.Router do
   end
 
   scope "/dashboard" do
-    pipe_through [:browser, :guardian, :browser_auth]
+    pipe_through [:dashboard_browser, :guardian, :browser_auth]
     live_dashboard "/", metrics: ErlmasteryWeb.Telemetry
   end
 

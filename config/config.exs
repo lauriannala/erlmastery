@@ -65,6 +65,14 @@ config :erlmastery, Erlmastery.PromEx,
 
 config :erlmastery, :environment, config_env()
 
+config :erlmastery,
+       :content_security_policy,
+       "default-src 'none'; connect-src 'self'; frame-src 'self'; img-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self'"
+
+config :erlmastery,
+       :content_security_policy_dashboard,
+       "default-src 'none'; connect-src 'self'; frame-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self' data:"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
