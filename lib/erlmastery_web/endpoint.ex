@@ -8,8 +8,10 @@ defmodule ErlmasteryWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_erlmastery_key",
-    signing_salt: "4zOEeYpb"
+    key: "__Host-erlmastery_key",
+    signing_salt: "4zOEeYpb",
+    secure: true,
+    same_site: "Lax"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
