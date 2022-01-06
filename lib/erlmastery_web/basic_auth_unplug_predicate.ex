@@ -11,9 +11,11 @@ defmodule Erlmastery.BasicAuthUnplugPredicate do
       {actual_username, actual_password} ->
         success = username() == actual_username and password() == actual_password
 
-        if username() != actual_username, do: Logger.info("Username does not match")
-        if password() != actual_password, do: Logger.info("Password does not match")
-        if success, do: Logger.info("Succesful metrics poller auth")
+        if username() != actual_username,
+          do: Logger.error("Metrics poller username does not match")
+
+        if password() != actual_password,
+          do: Logger.error("Metrics poller password does not match")
 
         success
 
