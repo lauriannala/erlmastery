@@ -18,6 +18,8 @@ defmodule Erlmastery.MixProject do
   #
   # Type `mix help compile.app` for more information.
   def application do
+    {:ok, _} = Application.ensure_all_started(:timex)
+
     [
       mod: {Erlmastery.Application, []},
       extra_applications: [:logger, :runtime_tools, :os_mon]
@@ -41,6 +43,7 @@ defmodule Erlmastery.MixProject do
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.16.0"},
       {:floki, ">= 0.30.0", only: :test},
+      {:loki_logger, "~> 0.3.0"},
       {:phoenix_live_dashboard, "~> 0.5"},
       {:prom_ex, "~> 1.6.0"},
       {:unplug, "~> 0.2.1"},
