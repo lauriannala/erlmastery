@@ -43,6 +43,7 @@ defmodule Erlmastery.MixProject do
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.16.0"},
       {:floki, ">= 0.30.0", only: :test},
+      {:timex, "~> 3.7"},
       {:loki_logger,
        git: "https://github.com/lauriannala/LokiLogger.git",
        tag: "f203fbf59a780ece826bedf385a5d84ceea17128"},
