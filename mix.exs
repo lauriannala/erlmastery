@@ -62,7 +62,8 @@ defmodule Erlmastery.MixProject do
       {:guardian, "~> 2.0"},
       {:ecto_psql_extras, "~> 0.6"},
       {:phoenix_markdown, "~> 1.0"},
-      {:earmark, "~> 1.4"}
+      {:earmark, "~> 1.4"},
+      {:oban, "~> 2.10"}
     ]
   end
 

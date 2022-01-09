@@ -73,6 +73,17 @@ config :erlmastery,
        :content_security_policy_dashboard,
        "default-src 'none'; connect-src 'self'; frame-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self' data:"
 
+config :erlmastery, Oban,
+  repo: Erlmastery.Repo,
+  plugins: [
+    Oban.Plugins.Pruner,
+    {Oban.Plugins.Cron,
+     crontab: [
+       {"* * * * *", Erlmastery.Workers.BroadcastLiveDisconnect}
+     ]}
+  ],
+  queues: [broadcast_live_disconnect: 1]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"

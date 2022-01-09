@@ -31,6 +31,7 @@ defmodule ErlmasteryWeb.AuthController do
         |> Authentication.Plug.sign_in(user)
         |> put_flash(:info, "Successfully authenticated.")
         |> put_session(:current_user, user)
+        |> put_session(:live_socket_id, "users_socket:#{user.id}")
         |> configure_session(renew: true)
         |> redirect(to: "/")
 
