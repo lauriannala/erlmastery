@@ -64,7 +64,7 @@ defmodule Erlmastery.PromEx do
       Plugins.Beam,
       {Plugins.Phoenix, router: ErlmasteryWeb.Router, endpoint: ErlmasteryWeb.Endpoint},
       Plugins.Ecto,
-      # Plugins.Oban,
+      Plugins.Oban,
       Plugins.PhoenixLiveView
       # Plugins.Absinthe,
       # Plugins.Broadway,
@@ -90,7 +90,7 @@ defmodule Erlmastery.PromEx do
       {:prom_ex, "beam.json"},
       {:prom_ex, "phoenix.json"},
       {:prom_ex, "ecto.json"},
-      # {:prom_ex, "oban.json"},
+      {:prom_ex, "oban.json"},
       {:prom_ex, "phoenix_live_view.json"}
       # {:prom_ex, "absinthe.json"},
       # {:prom_ex, "broadway.json"},
