@@ -10,7 +10,6 @@ defmodule Erlmastery.Workers.BroadcastLiveDisconnect do
 
   @impl Oban.Worker
   def perform(_) do
-    Logger.info("Broadcasting live disconnect.")
     query = from u in User, select: u.id
     user_ids = Repo.all(query)
 
