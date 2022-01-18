@@ -97,7 +97,7 @@ if config_env() == :prod do
     level: :info,
     format: "$metadata level=$level $levelpad$message",
     metadata: :all,
-    max_buffer: 5,
+    max_buffer: 1,
     loki_labels: %{application: "erlmastery_prod", elixir_node: "node"},
     loki_host: System.get_env("LOKI_HOST"),
     basic_auth_user: System.get_env("LOKI_USER"),
