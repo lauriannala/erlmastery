@@ -89,7 +89,7 @@ Competent in sharing and seeking knowledge, along with ability to provide consis
 * __English__ - excellent
 * __Swedish__ - basics
 
-### Computer skills
+## Computer skills
 
 I'm experienced with multiple programming languages, mainly elixir/erlang/otp, c#, c++ and javascript.
 I'm familiar with functional programming and design patterns. I'm also fluent with object-oriented programming.
