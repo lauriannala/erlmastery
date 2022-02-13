@@ -47,7 +47,7 @@ defmodule Erlmastery.MixProject do
       {:loki_logger,
        git: "https://github.com/lauriannala/LokiLogger.git",
        tag: "f203fbf59a780ece826bedf385a5d84ceea17128"},
-      {:phoenix_live_dashboard, "~> 0.6.2"},
+      {:phoenix_live_dashboard, "~> 0.6.4"},
       {:prom_ex, "~> 1.6.0"},
       {:unplug, "~> 0.2.1"},
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
