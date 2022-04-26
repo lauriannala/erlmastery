@@ -49,7 +49,7 @@ defmodule Erlmastery.MixProject do
        tag: "f203fbf59a780ece826bedf385a5d84ceea17128"},
       {:phoenix_live_dashboard, "~> 0.6.4"},
       {:prom_ex, "~> 1.7"},
-      {:unplug, "~> 0.2.1"},
+      {:unplug, "~> 1.0.0"},
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
       {:swoosh, "~> 1.3"},
       {:telemetry_metrics, "~> 0.6"},
