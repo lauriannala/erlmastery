@@ -7,8 +7,8 @@ Sofware Developer, M.C.S student
 
 ## Currently
 
-Coding and maintaining software using rust and elixir programming languages.
-I work at [Solita](https://www.solita.fi/).
+Building software with Elixir/Erlang/OTP and Rust.
+I work at [Erlang Solutions](https://www.erlang-solutions.com/).
 
 ### Specialized in
 
@@ -17,7 +17,7 @@ Software design and architecture.
 ### Interests
 
 Functional programming with erlang and elixir. Efficient system development with c++ and rust.
-Improving my workflows with unix-tools such as vim, tmux and fish-shell. Making friends at work and having mostly productive, yet always fun pair-coding sessions. When I code by myself, I listen to dark ambient or snes soundtracks as background music.
+Improving my workflows with unix-tools such as vim, emacs, tmux and zsh. Making friends at work and having mostly productive, yet always fun pair-coding sessions. When I code by myself, I listen to dark ambient or snes soundtracks as background music.
 
 I love:
 * Reading books about software, lovecraftian horror, fantasy, mysticism and wisdom
@@ -27,7 +27,11 @@ I love:
 
 ## Work experience
 
-`2018 - present`
+`May 2022 - present`
+
+* Developer/consultant - __Erlang Solutions__
+
+`May 2018 - May 2022`
 
 Software Designer - __Solita__
 
@@ -95,7 +99,7 @@ I'm experienced with multiple programming languages, mainly elixir/erlang/otp, c
 I'm familiar with functional programming and design patterns. I'm also fluent with object-oriented programming.
 I have good knowledge and experience with both relational and nosql databases.
 
-My favorite development environment is mac/linux machine with vim, tmux and fish-shell.
+My preferred development environment is unix-based machine with vim, emacs, tmux and zsh.
 I know my way around IDEs such as visual studio and intellij idea. I will not tremble in fear if I'm suddenly dropped in a remote bash shell.
 
 I'm passionate about code and I learn new languages and codebases fast.
