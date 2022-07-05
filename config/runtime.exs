@@ -42,8 +42,8 @@ if config_env() == :prod do
       port: String.to_integer(System.get_env("PORT") || "4000")
     ],
     secret_key_base: secret_key_base,
-    url: [host: System.fetch_env("HOST_URL")],
-    live_view: [signing_salt: System.fetch_env("LIVE_VIEW_SALT")]
+    url: [host: System.fetch_env!("HOST_URL")],
+    live_view: [signing_salt: System.fetch_env!("LIVE_VIEW_SALT")]
 
   # ## Using releases
   #
@@ -99,7 +99,7 @@ if config_env() == :prod do
     metadata: :all,
     max_buffer: 1,
     loki_labels: %{application: "erlmastery_prod", elixir_node: "node"},
-    loki_host: System.fetch_env("LOKI_HOST"),
-    basic_auth_user: System.fetch_env("LOKI_USER"),
-    basic_auth_password: System.fetch_env("LOKI_PASSWORD")
+    loki_host: System.fetch_env!("LOKI_HOST"),
+    basic_auth_user: System.fetch_env!("LOKI_USER"),
+    basic_auth_password: System.fetch_env!("LOKI_PASSWORD")
 end
