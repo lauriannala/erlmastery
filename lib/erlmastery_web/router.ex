@@ -4,7 +4,7 @@ defmodule ErlmasteryWeb.Router do
   import Phoenix.LiveDashboard.Router
 
   pipeline :browser do
-    content_security_policy = Application.get_env(:erlmastery, :content_security_policy)
+    content_security_policy = Application.fetch_env!(:erlmastery, :content_security_policy)
 
     plug :accepts, ["html"]
     plug :fetch_session
@@ -21,7 +21,7 @@ defmodule ErlmasteryWeb.Router do
 
   # Relieved csp settings for dashboard views.
   pipeline :dashboard_browser do
-    content_security_policy = Application.get_env(:erlmastery, :content_security_policy_dashboard)
+    content_security_policy = Application.fetch_env!(:erlmastery, :content_security_policy_dashboard)
 
     plug :accepts, ["html"]
     plug :fetch_session

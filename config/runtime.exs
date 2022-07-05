@@ -42,8 +42,8 @@ if config_env() == :prod do
       port: String.to_integer(System.get_env("PORT") || "4000")
     ],
     secret_key_base: secret_key_base,
-    url: [host: System.get_env("HOST_URL")],
-    live_view: [signing_salt: System.get_env("LIVE_VIEW_SALT")]
+    url: [host: System.fetch_env("HOST_URL")],
+    live_view: [signing_salt: System.fetch_env("LIVE_VIEW_SALT")]
 
   # ## Using releases
   #
@@ -73,19 +73,19 @@ if config_env() == :prod do
   #
   # See https://hexdocs.pm/swoosh/Swoosh.html#module-installation for details.
   config :ueberauth, Ueberauth.Strategy.Discord.OAuth,
-    client_id: System.get_env("DISCORD_CLIENT_ID"),
-    client_secret: System.get_env("DISCORD_CLIENT_SECRET")
+    client_id: System.fetch_env!("DISCORD_CLIENT_ID"),
+    client_secret: System.fetch_env!("DISCORD_CLIENT_SECRET")
 
   config :erlmastery, ErlmasteryWeb.Authentication,
-    secret_key: System.get_env("GUARDIAN_SECRET_KEY")
+    secret_key: System.fetch_env!("GUARDIAN_SECRET_KEY")
 
-  config :erlmastery, :telemetry_poller_username, System.get_env("TELEMETRY_POLLER_USERNAME")
-  config :erlmastery, :telemetry_poller_password, System.get_env("TELEMETRY_POLLER_PASSWORD")
+  config :erlmastery, :telemetry_poller_username, System.fetch_env!("TELEMETRY_POLLER_USERNAME")
+  config :erlmastery, :telemetry_poller_password, System.fetch_env!("TELEMETRY_POLLER_PASSWORD")
 
   config :erlmastery, Erlmastery.PromEx,
     grafana: [
-      host: System.get_env("GRAFANA_HOST"),
-      auth_token: System.get_env("GRAFANA_AUTH_TOKEN"),
+      host: System.fetch_env!("GRAFANA_HOST"),
+      auth_token: System.fetch_env!("GRAFANA_AUTH_TOKEN"),
       # This is an optional setting and will default to `true`
       upload_dashboards_on_start: true
     ]
@@ -99,7 +99,7 @@ if config_env() == :prod do
     metadata: :all,
     max_buffer: 1,
     loki_labels: %{application: "erlmastery_prod", elixir_node: "node"},
-    loki_host: System.get_env("LOKI_HOST"),
-    basic_auth_user: System.get_env("LOKI_USER"),
-    basic_auth_password: System.get_env("LOKI_PASSWORD")
+    loki_host: System.fetch_env("LOKI_HOST"),
+    basic_auth_user: System.fetch_env("LOKI_USER"),
+    basic_auth_password: System.fetch_env("LOKI_PASSWORD")
 end
