@@ -1,7 +1,5 @@
 # My resume
 
-`Last updated 28.12.2021`
-
 ## Lauri Annala
 Sofware Developer, M.C.S student
 
