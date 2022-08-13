@@ -17,3 +17,6 @@
 
   * [Code at github](https://github.com/lauriannala/ex_chip8)
   * Scenic for user interface rendering and user input
+
+## Exercism solutions
+  * [Code at github](https://github.com/lauriannala/exercism)
