@@ -18,16 +18,26 @@ Functional programming with erlang and elixir. Efficient system development with
 Improving my workflows with unix-tools such as vim, emacs, tmux and zsh. Making friends at work and having mostly productive, yet always fun pair-coding sessions. When I code by myself, I listen to dark ambient or snes soundtracks as background music.
 
 I love:
-* Reading books about software, lovecraftian horror, fantasy, mysticism and wisdom
-* Jamming to heavy metal songs with my (t)rusty old jackson guitar
-* Lifting weights at my local gym while listening to [power-inducing hymns](https://www.youtube.com/watch?v=Hf0sac4APLg)
-* Watching Battlestar Galactica at home with the company of my dark lady (my wife)
+* Reading books about software, horror, fantasy, religion, philosophy, mysticism and wisdom
+* Jamming to heavy metal songs with guitar
+* Lifting weights at my local gym while listening to [power-inducing music](https://www.youtube.com/watch?v=Hf0sac4APLg)
 
 ## Work experience
 
 `May 2022 - present`
 
-* Developer/consultant - __Erlang Solutions__
+Developer/consultant - __Erlang Solutions__
+
+* Api development for streaming platform using Elixir and Phoenix
+  * Test-driven-development with mocking tools
+  * Application access control and session handling, Json object signing and encryption, JWT-tokens, JWS and JWK
+  * User geoip detection and access control
+  * AWS infrastructure and devops: ECS, Cloudwatch, ALB, Cloudfront, WAF
+  * Logging and metrics using Datadog
+  * CD/CI: github actions, terraform and aws cdk
+  * Setting up flows for various streaming protocols and digital rights management
+
+<br/>
 
 `May 2018 - May 2022`
 
