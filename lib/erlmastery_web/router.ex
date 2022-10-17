@@ -21,7 +21,8 @@ defmodule ErlmasteryWeb.Router do
 
   # Relieved csp settings for dashboard views.
   pipeline :dashboard_browser do
-    content_security_policy = Application.fetch_env!(:erlmastery, :content_security_policy_dashboard)
+    content_security_policy =
+      Application.fetch_env!(:erlmastery, :content_security_policy_dashboard)
 
     plug :accepts, ["html"]
     plug :fetch_session
