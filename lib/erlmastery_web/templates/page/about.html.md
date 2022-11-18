@@ -119,13 +119,14 @@ I'm passionate about code and I learn new languages and codebases fast.
 	:elixir,
 	:erlang,
 	:otp,
+    :aws,
 	:phoenix,
 	:ecto,
 	:oban,
 	:c++,
+    :c_sharp,
 	:postgres,
 	:functional_programming,
-	:low_level_programming,
 	:web_dev,
 	:system_dev
 ]
