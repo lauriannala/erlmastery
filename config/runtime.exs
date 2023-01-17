@@ -90,16 +90,5 @@ if config_env() == :prod do
       upload_dashboards_on_start: true
     ]
 
-  config :logger,
-    backends: [:console, LokiLogger]
-
-  config :logger, :loki_logger,
-    level: :info,
-    format: "$metadata level=$level $levelpad$message",
-    metadata: :all,
-    max_buffer: 1,
-    loki_labels: %{application: "erlmastery_prod", elixir_node: "node"},
-    loki_host: System.fetch_env!("LOKI_HOST"),
-    basic_auth_user: System.fetch_env!("LOKI_USER"),
-    basic_auth_password: System.fetch_env!("LOKI_PASSWORD")
+  config :logger, backends: [:console]
 end
