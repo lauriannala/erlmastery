@@ -5,8 +5,7 @@ Sofware Developer, M.C.S student
 
 ## Currently
 
-Building software with Elixir/Erlang/OTP and Rust.
-I work at [Erlang Solutions](https://www.erlang-solutions.com/).
+I work at [MyLab Oy](https://www.mylab.fi/en/).
 
 ### Specialized in
 
@@ -24,7 +23,11 @@ I love:
 
 ## Work experience
 
-`May 2022 - present`
+`Jan 2023 - present`
+
+Software Specialist - __Mylab Oy__
+
+`May 2022 - Jan 2023`
 
 Developer/consultant - __Erlang Solutions__
 
