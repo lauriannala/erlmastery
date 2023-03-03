@@ -35,3 +35,4 @@ npm-debug.log
 dev.exs
 
 *.swp
+.DS_Store
