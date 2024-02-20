@@ -23,13 +23,15 @@ I love:
 
 ## Work experience
 
+### Software Specialist - __Mylab Oy__
+
 `Jan 2023 - present`
 
-Software Specialist - __Mylab Oy__
+Product development, Web UI development using React and Typescript. Server-side development with Intersystems Objectscript.
+
+### Developer/consultant - __Erlang Solutions__
 
 `May 2022 - Jan 2023`
-
-Developer/consultant - __Erlang Solutions__
 
 * Api development for streaming platform using Elixir and Phoenix
   * Test-driven-development with mocking tools
@@ -42,9 +44,9 @@ Developer/consultant - __Erlang Solutions__
 
 <br/>
 
-`May 2018 - May 2022`
+### Software Designer - __Solita__
 
-Software Designer - __Solita__
+`May 2018 - May 2022`
 
 * Rest api using aws apigateway and aws lambda, persistence with aws s3
 * Developing and maintaining fullstack web apps using elixir and phoenix framework
@@ -65,9 +67,9 @@ Software Designer - __Solita__
 
 <br/>
 
-`Jan 2017 - May 2018`
+### Full Stack Developer - __Suomen Kaukokiito Oy__
 
-Full Stack Developer - __Suomen Kaukokiito Oy__
+`Jan 2017 - May 2018`
 
 * Developing and maintaining web sites using c# and optimizely (formerly known as episerver)
 * Web app development with c#
@@ -75,24 +77,23 @@ Full Stack Developer - __Suomen Kaukokiito Oy__
 
 <br/>
 
-`May 2016 - Dec 2016`
+### Sofware Engineer - __Basware__
 
-Sofware Engineer - __Basware__
+`May 2016 - Dec 2016`
 
 * Frontend development with angular, typescript and bootstrap
 * Backend development with c#
 
 ## Education
 
+### Tampere University - __Master's degree, Computer Science__
+
 `September 2021 - present (ongoing)`
-
-Tampere University - __Master's degree, Computer Science__
-
 <br/>
 
-`2013-2017`
+### Tampere University of Applied Sciences - __Bachelor of Engineering, Computer Software Engineering__
 
-Tampere University of Applied Sciences - __Bachelor of Engineering, Computer Software Engineering__
+`2013-2017`
 
 ## Communication skills
 
